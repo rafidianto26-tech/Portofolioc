@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cursor-dot" data-cursor-dot></div><div class="cursor-outline" data-cursor-outline></div>
-    <div class="parallax-bg" id="parallax-bg"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
-    
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <canvas id="particles-canvas"></canvas>
+
     <div id="loading-screen">
         <div class="loader-content">
-            <div class="loader-terminal"><div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><div class="terminal-body" id="terminal-text"></div></div>
+            <div class="loader-terminal">
+                <div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                <div class="terminal-body" id="terminal-text"></div>
+            </div>
             <div class="loading-bar-container"><div class="loading-bar" id="loading-bar"></div></div>
             <div class="loading-percentage" id="loading-percentage">0%</div>
         </div>
     </div>
 
+    <div class="parallax-bg" id="parallax-bg">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
     <nav class="floating-nav">
-        <div class="logo magnetic">Portofolio.</div>
+        <div class="logo">Chiro.dev</div>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link magnetic">Beranda</a></li>
-            <li><a href="tentang.html" class="nav-link magnetic">Tentang</a></li>
-            <li><a href="proyek.html" class="nav-link magnetic">Proyek</a></li>
-            <li><a href="layanan.html" class="nav-link magnetic">Layanan</a></li>
-            <li><a href="karier.html" class="nav-link magnetic">Karier</a></li>
-            <li><a href="kontak.html" class="nav-link magnetic">Kontak</a></li>
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+            <li><a href="proyek.html" class="nav-link">Proyek</a></li>
+            <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+            <li><a href="karier.html" class="nav-link">Karier</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>
     </nav>
 
@@ -35,19 +47,26 @@
         <section class="content-section reveal">
             <h2 class="gradient-text animated-gradient">Mari Wujudkan Ide Anda!</h2>
             <p>Punya proyek game, website, atau komunitas yang ingin dikembangkan? Jangan ragu untuk menyapa.</p>
-            
+
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Hubungi Langsung</h3>
-                    <div class="contact-item magnetic"><span class="contact-icon">📧</span><div><strong>Email</strong><p>hello.chiro@email.com</p></div></div>
-                    <div class="contact-item magnetic"><span class="contact-icon">🎮</span><div><strong>Discord</strong><p>@chiro_dev</p></div></div>
-                    <div class="contact-item magnetic"><span class="contact-icon">📍</span><div><strong>Lokasi</strong><p>Indonesia (Remote)</p></div></div>
+                    <div class="contact-item magnetic">
+                        <span class="contact-icon">📧</span>
+                        <div><strong>Email</strong><p>hello.chiro@email.com</p></div>
+                    </div>
+                    <div class="contact-item magnetic">
+                        <span class="contact-icon">🎮</span>
+                        <div><strong>Discord</strong><p>@chiro_dev</p></div>
+                    </div>
+                    <div class="contact-item magnetic">
+                        <span class="contact-icon">📍</span>
+                        <div><strong>Lokasi</strong><p>Indonesia (Remote)</p></div>
+                    </div>
                 </div>
 
-                <!-- Formulir telah diperbarui dengan action ke Formspree -->
-                <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="4bdb8307-a16b-4d18-8db5-4a4da297ee0d">
-    <!-- input lainnya tetap sama -->   ← ini yang bikin berantakan
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form-modern">
+                    <input type="hidden" name="access_key" value="4bdb8307-a16b-4d18-8db5-4a4da297ee0d">
                     <h3>Kirim Pesan</h3>
                     <input type="text" name="nama" placeholder="Nama Anda" required>
                     <input type="email" name="email" placeholder="Email Anda" required>
@@ -58,8 +77,7 @@
         </section>
     </main>
 
-    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan Visual Modern.</p></footer>
+    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan ❤️</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
-
