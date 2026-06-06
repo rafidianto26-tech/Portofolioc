@@ -10,59 +10,98 @@
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
     <div class="scroll-progress" id="scroll-progress"></div>
-    <div class="parallax-bg" id="parallax-bg"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
-    
+    <canvas id="particles-canvas"></canvas>
+
     <div id="loading-screen">
         <div class="loader-content">
-            <div class="loader-terminal"><div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><div class="terminal-body" id="terminal-text"></div></div>
+            <div class="loader-terminal">
+                <div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                <div class="terminal-body" id="terminal-text"></div>
+            </div>
             <div class="loading-bar-container"><div class="loading-bar" id="loading-bar"></div></div>
             <div class="loading-percentage" id="loading-percentage">0%</div>
         </div>
     </div>
 
+    <div class="parallax-bg" id="parallax-bg">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
     <nav class="floating-nav">
-        <div class="logo magnetic">Portofolio.</div>
+        <div class="logo">Chiro.dev</div>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-link magnetic">Beranda</a></li>
-            <li><a href="tentang.html" class="nav-link magnetic">Tentang</a></li>
-            <li><a href="proyek.html" class="nav-link magnetic">Proyek</a></li>
-            <li><a href="layanan.html" class="nav-link magnetic">Layanan</a></li>
-            <li><a href="karier.html" class="nav-link magnetic">Karier</a></li>
-            <li><a href="kontak.html" class="nav-link magnetic">Kontak</a></li>
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+            <li><a href="proyek.html" class="nav-link">Proyek</a></li>
+            <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+            <li><a href="karier.html" class="nav-link">Karier</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>
     </nav>
-    
-    <a href="kontak.html" class="floating-collab-btn magnetic"><span class="icon">💬</span> <span class="btn-text">Ayo Ngobrol!</span></a>
+
+    <a href="kontak.html" class="floating-collab-btn magnetic"><span class="icon">💬</span><span class="btn-text">Ayo Ngobrol!</span></a>
 
     <main class="sub-page-container page-enter">
         <section class="reveal content-section">
             <h2 class="gradient-text animated-gradient">Siapa Saya?</h2>
-            <p>Saya berfokus pada pengembangan sistem digital dan pengalaman interaktif. Mulai dari merancang antarmuka website modern, mengembangkan mekanik game menggunakan Luau di Roblox Studio, hingga memproduksi konten media visual yang memukau.</p>
-            
-            <div class="skills-container" style="margin-top: 50px;">
-                <div class="skill"><div class="skill-name">Luau & Roblox Studio</div><div class="skill-bar"><div class="skill-per" data-target="90%"></div></div></div>
-                <div class="skill"><div class="skill-name">HTML, CSS, JavaScript</div><div class="skill-bar"><div class="skill-per" data-target="85%"></div></div></div>
-                <div class="skill"><div class="skill-name">Discord Architecture & Bots</div><div class="skill-bar"><div class="skill-per" data-target="95%"></div></div></div>
-                <div class="skill"><div class="skill-name">Video Editing & Media Production</div><div class="skill-bar"><div class="skill-per" data-target="80%"></div></div></div>
+            <p>Saya berfokus pada pengembangan sistem digital dan pengalaman interaktif. Mulai dari merancang antarmuka website modern, mengembangkan mekanik game menggunakan Luau, hingga memproduksi konten media visual yang memukau.</p>
+
+            <div class="skills-container" style="margin-top: 55px;">
+                <div class="skill">
+                    <div class="skill-header"><span class="skill-name">Luau & Roblox Studio</span><span class="skill-level">90%</span></div>
+                    <div class="skill-bar"><div class="skill-per" data-target="90%"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header"><span class="skill-name">HTML, CSS, JavaScript</span><span class="skill-level">85%</span></div>
+                    <div class="skill-bar"><div class="skill-per" data-target="85%"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header"><span class="skill-name">Discord Architecture & Bots</span><span class="skill-level">95%</span></div>
+                    <div class="skill-bar"><div class="skill-per" data-target="95%"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header"><span class="skill-name">Video Editing & Media Production</span><span class="skill-level">80%</span></div>
+                    <div class="skill-bar"><div class="skill-per" data-target="80%"></div></div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15" data-suffix="+">0+</span>
+                    <span class="stat-label">Proyek Selesai</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3" data-suffix="+ Tahun">0</span>
+                    <span class="stat-label">Pengalaman</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+                    <span class="stat-label">Kepuasan Klien</span>
+                </div>
             </div>
         </section>
 
-        <section class="reveal content-section dark-section glass-panel">
+        <section class="reveal content-section dark-section">
             <h2 class="gradient-text animated-gradient">Kenapa Memilih Saya?</h2>
+            <p>Lebih dari sekedar koding — saya menghadirkan solusi yang berpusat pada pengalaman pengguna.</p>
             <div class="benefits-grid">
                 <div class="benefit-card magnetic">
-                    <div class="benefit-icon">🚀</div>
+                    <span class="benefit-icon">🚀</span>
                     <h3>Berorientasi Hasil</h3>
                     <p>Fokus pada fungsionalitas dan pengalaman pengguna yang responsif di setiap baris kode yang ditulis.</p>
                 </div>
                 <div class="benefit-card magnetic">
-                    <div class="benefit-icon">💡</div>
+                    <span class="benefit-icon">💡</span>
                     <h3>Solusi Kreatif</h3>
                     <p>Merancang sistem yang tak hanya bekerja dengan baik, namun juga memiliki struktur yang elegan dan aman.</p>
                 </div>
                 <div class="benefit-card magnetic">
-                    <div class="benefit-icon">🤝</div>
+                    <span class="benefit-icon">🤝</span>
                     <h3>Komunikatif</h3>
                     <p>Mudah dihubungi, terbuka terhadap ide baru, dan siap berdiskusi demi mencapai visi kolaborasi bersama.</p>
                 </div>
@@ -70,8 +109,7 @@
         </section>
     </main>
 
-    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan Visual Modern.</p></footer>
+    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan ❤️</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
-
