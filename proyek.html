@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya & Proyek | Portofolio Chiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div><div class="cursor-outline" data-cursor-outline></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="parallax-bg" id="parallax-bg"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
+    
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-terminal"><div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><div class="terminal-body" id="terminal-text"></div></div>
+            <div class="loading-bar-container"><div class="loading-bar" id="loading-bar"></div></div>
+            <div class="loading-percentage" id="loading-percentage">0%</div>
+        </div>
+    </div>
+
+    <nav class="floating-nav">
+        <div class="logo magnetic">Portofolio.</div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link magnetic">Beranda</a></li>
+            <li><a href="tentang.html" class="nav-link magnetic">Tentang</a></li>
+            <li><a href="proyek.html" class="nav-link magnetic">Proyek</a></li>
+            <li><a href="layanan.html" class="nav-link magnetic">Layanan</a></li>
+            <li><a href="karier.html" class="nav-link magnetic">Karier</a></li>
+            <li><a href="kontak.html" class="nav-link magnetic">Kontak</a></li>
+        </ul>
+    </nav>
+    <a href="kontak.html" class="floating-collab-btn magnetic"><span class="icon">💬</span> <span class="btn-text">Ayo Ngobrol!</span></a>
+
+    <main class="sub-page-container page-enter">
+        <section class="content-section">
+            <h2 class="reveal gradient-text animated-gradient">Karya Terbaik Saya</h2>
+            <p class="reveal delay-1" style="margin-bottom: 50px;">Klik kartu untuk membaca penjelasan teknis dan detail fitur yang telah saya rancang.</p>
+            
+            <div class="project-grid">
+                <div class="card reveal delay-1" data-id="1">
+                    <div class="card-icon-header">🎮</div>
+                    <div class="card-content">
+                        <h3>Sistem Game Roblox</h3>
+                        <p>Pengembangan map roleplay dan sistem scripting kompleks untuk manajemen interaksi pemain.</p>
+                        <div class="tags"><span class="tag">Luau</span><span class="tag">Roblox Studio</span></div>
+                        <div class="card-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="card reveal delay-2" data-id="2">
+                    <div class="card-icon-header">💻</div>
+                    <div class="card-content">
+                        <h3>Desain Antarmuka Web</h3>
+                        <p>Merancang landing page interaktif dengan performa tinggi untuk kebutuhan promosi digital.</p>
+                        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JS</span></div>
+                        <div class="card-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="card reveal delay-3" data-id="3">
+                    <div class="card-icon-header">🤖</div>
+                    <div class="card-content">
+                        <h3>Arsitektur Discord</h3>
+                        <p>Membangun hierarki server komunitas skala besar dengan keamanan dan otomatisasi bot kustom.</p>
+                        <div class="tags"><span class="tag">Discord Setup</span><span class="tag">Bot Auto</span></div>
+                        <div class="card-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="card reveal delay-4" data-id="4">
+                    <div class="card-icon-header">🎬</div>
+                    <div class="card-content">
+                        <h3>Produksi Media Visual</h3>
+                        <p>Pembuatan aset video dan konten kreatif dinamis untuk meningkatkan retensi penonton.</p>
+                        <div class="tags"><span class="tag">Video Editing</span><span class="tag">Content Creation</span></div>
+                        <div class="card-arrow">➔</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <span id="modal-icon">🎮</span>
+                <h2 id="modal-title" class="gradient-text animated-gradient">Judul</h2>
+            </div>
+            <div class="modal-body">
+                <p id="modal-desc">Deskripsi detail...</p>
+                <div id="modal-tags" class="tags" style="margin-top: 20px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan Visual Modern.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
