@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karier & Pencapaian | Portofolio Chiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div><div class="cursor-outline" data-cursor-outline></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="parallax-bg" id="parallax-bg"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
+    
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-terminal"><div class="terminal-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><div class="terminal-body" id="terminal-text"></div></div>
+            <div class="loading-bar-container"><div class="loading-bar" id="loading-bar"></div></div>
+            <div class="loading-percentage" id="loading-percentage">0%</div>
+        </div>
+    </div>
+
+    <nav class="floating-nav">
+        <div class="logo magnetic">Portofolio.</div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link magnetic">Beranda</a></li>
+            <li><a href="tentang.html" class="nav-link magnetic">Tentang</a></li>
+            <li><a href="proyek.html" class="nav-link magnetic">Proyek</a></li>
+            <li><a href="layanan.html" class="nav-link magnetic">Layanan</a></li>
+            <li><a href="karier.html" class="nav-link magnetic">Karier</a></li>
+            <li><a href="kontak.html" class="nav-link magnetic">Kontak</a></li>
+        </ul>
+    </nav>
+    <a href="kontak.html" class="floating-collab-btn magnetic"><span class="icon">💬</span> <span class="btn-text">Ayo Ngobrol!</span></a>
+
+    <main class="sub-page-container page-enter">
+        <section class="content-section">
+            <h2 class="reveal gradient-text animated-gradient">Timeline Karier</h2>
+            <p class="reveal delay-1">Perjalanan eksplorasi digital, pencapaian, dan pengembangan keterampilan saya dari waktu ke waktu.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-item reveal delay-2" data-id="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - 2024</span>
+                        <h3>Memulai Eksplorasi Digital</h3>
+                        <p>Mempelajari dasar-dasar pemrograman logika dan desain visual secara otodidak.</p>
+                        <div class="card-arrow timeline-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal delay-3" data-id="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Awal 2025</span>
+                        <h3>Terjun ke Game Development</h3>
+                        <p>Menguasai Luau secara mendalam di platform Roblox Studio dan merilis sistem fungsional.</p>
+                        <div class="card-arrow timeline-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal delay-4" data-id="3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Akhir 2025</span>
+                        <h3>Manajemen Komunitas & Arsitektur</h3>
+                        <p>Fokus memperluas keahlian ke arah infrastruktur komunitas digital skala besar (Discord).</p>
+                        <div class="card-arrow timeline-arrow">➔</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal delay-4" data-id="4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 - Sekarang</span>
+                        <h3>Kreator & Web Developer Multi-Disiplin</h3>
+                        <p>Mengekspansi keahlian ke ranah Web Development dan produksi media visual kreatif.</p>
+                        <div class="card-arrow timeline-arrow">➔</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="timeline-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <button class="close-modal" id="close-timeline-modal">&times;</button>
+            <div class="modal-header">
+                <span id="timeline-modal-icon">⏳</span>
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span id="timeline-modal-date" class="timeline-date" style="margin-bottom: 5px; font-size: 0.8rem;">Tahun</span>
+                    <h2 id="timeline-modal-title" class="gradient-text animated-gradient" style="font-size: 1.5rem;">Judul</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p id="timeline-modal-desc">Deskripsi detail...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Chiro. Dirancang & Dibangun dengan Visual Modern.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
